@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>WhatsApp Chat Analyzer</h1>
+        <p>Analyze your WhatsApp conversations easily!</p>
+    </header>
+
+    <main class="container">
+        <section class="upload-box">
+            <h2>Upload Your Chat</h2>
+            <p>WhatsApp chat ki exported .txt file select karo.</p>
+
+            <input type="file" id="chatFile" accept=".txt,text/plain">
+            <button id="analyzeBtn">Analyze Chat</button>
+            <p id="status" role="status">Abhi koi file select nahi hui.</p>
+        </section>
+
+        <section id="results" hidden>
+            <h2>Chat Statistics</h2>
+
+            <div class="stats">
+                <div class="card">
+                    <h3>Total Messages</h3>
+                    <p id="totalMessages">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Participants</h3>
+                    <p id="totalUsers">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Most Active User</h3>
+                    <p id="topUser">-</p>
+                </div>
+            </div>
+
+            <h2>Messages Per User</h2>
+            <ul id="userStats"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Your chat is analyzed locally in your browser.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

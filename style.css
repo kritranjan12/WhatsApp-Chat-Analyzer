@@ -1,0 +1,109 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #222;
+}
+
+header {
+    background: #075e54;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 18px;
+}
+
+.upload-box {
+    background: white;
+    padding: 28px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+button {
+    background: #128c7e;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #075e54;
+}
+
+#status {
+    overflow-wrap: anywhere;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px #00000010;
+}
+
+.card h3 {
+    font-size: 16px;
+    color: #555;
+}
+
+.card p {
+    color: #075e54;
+    font-size: 22px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+#userStats {
+    background: white;
+    padding: 20px 20px 20px 40px;
+    border-radius: 10px;
+    line-height: 2;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+[hidden] {
+    display: none !important;
+}
