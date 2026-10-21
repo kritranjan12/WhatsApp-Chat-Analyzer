@@ -20,8 +20,9 @@ analyzeBtn.addEventListener("click", async () => {
         // WhatsApp exported chat formats:
         // 12/31/25, 10:30 PM - Rahul: Hello
         // [31/12/25, 22:30:00] Rahul: Hello
+        
         const messageStart =
-            /^\[?\d{1,4}[/-]\d{1,2}[/-]\d{1,4},?\s+\d{1,2}:\d{2}(?::\d{2})?\s*(?:AM|PM|am|pm)?\]?\s*[-–]\s*/;
+            /^\[?\d{1,4}[/-]\d{1,2}[/-]\d{1,4},?\s+\d{1,2}:\d{2}(?::\d{2})?\s*(?:AM|PM|am|pm)?\]?\s*(?:[-–]\s*)?/;
 
         const users = {};
         let totalMessages = 0;
