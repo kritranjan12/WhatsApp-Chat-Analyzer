@@ -1,0 +1,162 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6f9;
+    color: #243247;
+}
+
+header {
+    background: #075e54;
+    color: white;
+    text-align: center;
+    padding: 30px 16px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 18px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.upload-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px #0000000c;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 18px 0;
+    max-width: 100%;
+}
+
+button {
+    background: #128c7e;
+    color: white;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #075e54;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#status {
+    overflow-wrap: anywhere;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 18px 0 28px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 12px #0000000a;
+    min-width: 0;
+}
+
+.card h3 {
+    margin-top: 0;
+    overflow-wrap: anywhere;
+}
+
+.stats .card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+}
+
+.overall-card {
+    border-left: 5px solid #128c7e;
+}
+
+.overall-card h3 {
+    font-size: 24px;
+}
+
+.muted {
+    color: #667085;
+    line-height: 1.6;
+}
+
+.probability-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.progress {
+    background: #e7ebef;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.progress div {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.positive-bar {
+    background: #16a36a;
+}
+
+.negative-bar {
+    background: #e05252;
+}
+
+.user-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+}
+
+.user-card p {
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #667085;
+}
+
+[hidden] {
+    display: none !important;
+}

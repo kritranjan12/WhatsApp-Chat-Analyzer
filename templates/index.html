@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Analyzer</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"
+            defer></script>
+</head>
+<body>
+    <header>
+        <h1>WhatsApp Chat Analyzer</h1>
+        <p>Chat statistics and AI-powered conversation sentiment</p>
+    </header>
+
+    <main class="container">
+        <section class="upload-box">
+            <h2>Upload Your Chat</h2>
+            <p>Select your exported WhatsApp .txt file.</p>
+
+            <input type="file" id="chatFile" accept=".txt,text/plain">
+            <button id="analyzeBtn">Analyze Chat</button>
+            <p id="status" role="status">No file selected.</p>
+        </section>
+
+        <section id="results" hidden>
+            <h2>Chat Statistics</h2>
+
+            <div class="stats">
+                <div class="card">
+                    <h3>Total Messages</h3>
+                    <p id="totalMessages">0</p>
+                </div>
+                <div class="card">
+                    <h3>Total Participants</h3>
+                    <p id="totalUsers">0</p>
+                </div>
+                <div class="card">
+                    <h3>Most Active User</h3>
+                    <p id="topUser">-</p>
+                </div>
+            </div>
+
+            <h2>Overall Conversation Sentiment</h2>
+            <p class="muted">
+                Based on the combined text of the entire conversation,
+                rather than a separate overall prediction for each message.
+            </p>
+
+            <div class="card overall-card">
+                <h3 id="overallSentiment">-</h3>
+                <p id="overallDescription"></p>
+
+                <div class="probability-row">
+                    <span>Positive score</span>
+                    <strong id="overallPositive">0%</strong>
+                </div>
+                <div class="progress">
+                    <div id="overallPositiveBar" class="positive-bar"></div>
+                </div>
+
+                <div class="probability-row">
+                    <span>Negative score</span>
+                    <strong id="overallNegative">0%</strong>
+                </div>
+                <div class="progress">
+                    <div id="overallNegativeBar" class="negative-bar"></div>
+                </div>
+            </div>
+
+            <h2>Message Sentiment Statistics</h2>
+            <div class="stats">
+                <div class="card">
+                    <h3>Positive Messages</h3>
+                    <p id="positiveMessages">0</p>
+                </div>
+                <div class="card">
+                    <h3>Negative Messages</h3>
+                    <p id="negativeMessages">0</p>
+                </div>
+            </div>
+
+            <h2>Messages and Sentiment Per User</h2>
+            <p class="muted">
+                Each user's sentiment is predicted from all of their
+                messages combined.
+            </p>
+            <div id="userStats" class="user-stats"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Chat processing runs on your local Python server.
+            Your chat is not intentionally sent to a third-party service.
+        </p>
+    </footer>
+</body>
+</html>
